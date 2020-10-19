@@ -15,8 +15,10 @@
     <div>
       <ul class="collection">
         <li v-bind:id="'row_task_' + task.id" class="collection-item" v-for="task in tasks" v-if="!task.is_done">
-          <input type="checkbox" v-bind:id="'task_' + task.id" v-on:change="doneTask(task.id)" />
-          <label v-bind:for="'task_' + task.id" class="word-color-black">{{ task.name }}</label>
+          <label v-bind:for="'task_' + task.id">
+            <input type="checkbox" v-bind:id="'task_' + task.id" />
+            <span>{{ task.name }}</span>
+          </label>
         </li>
       </ul>
     </div>
