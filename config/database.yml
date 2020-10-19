@@ -15,7 +15,6 @@ test:
   # database: db/test.sqlite3 変更
   database: MyApp_test
 
-# Herokuデプロイ時に再度見直す
 production:
   <<: *default
   adapter: postgresql
